@@ -1,12 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './components/Home'
 
 function App() {
   return (
-    <React.Fragment>
-      Yolo
-    </React.Fragment>
+    <BrowserRouter>
+      <Route path="/" component={Home} exact/>
+      <Route path="/*">
+        404 Error
+      </Route>
+    </BrowserRouter>
   );
 }
 
